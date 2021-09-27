@@ -1,6 +1,4 @@
 ## ALX School
-=======
->>>>>>> e9ecab2a3de4217c70e7116f27f87d8ec0dae666
 ## Higher Level Programming - Python
 
 
