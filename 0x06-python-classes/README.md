@@ -1,6 +1,6 @@
 # PYTHON-CLASSES
 
-##General
+## General
 
 Why Python programming is awesome
 
