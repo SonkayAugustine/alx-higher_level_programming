@@ -14,7 +14,7 @@ class Student:
 
         def to_json(self, attrs=None):
             """return a dictionary representation of a student instance
-            If attrs is a list of strings, only attribute names contained
+            Only attribute names contained
 in this list must be retrieved.
             Otherwise, all attributes must be retrieved
 """
@@ -31,10 +31,12 @@ in this list must be retrieved.
                     my_dict[key] = value
             return my_dict
 
+
 def reload_from_json(self, json):
     """this function replaces all attributes of the Student instance
     with the ones in the json argument
     """
+
 
     for key, value in json.items():
         if key in self.__dict__:

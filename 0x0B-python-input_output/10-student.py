@@ -14,7 +14,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """return a dictionary representation of a Student instance
-        If attrs is a list pf strings, only attribute names contained in this list must be retrieved.
+        attribute names contained in this list must be retrieved.
         Otherwise, all attributes must be retrieved
         """
         try:
