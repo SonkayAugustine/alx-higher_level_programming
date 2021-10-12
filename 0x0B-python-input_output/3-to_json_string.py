@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+"""
+Task 3 module
+"""
+
+
 import json
-"""
-Module: 5-to_json_string.py
-"""
 
 
 def to_json_string(my_obj):
