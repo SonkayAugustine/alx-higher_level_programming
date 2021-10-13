@@ -31,12 +31,10 @@ in this list must be retrieved.
                     my_dict[key] = value
             return my_dict
 
-
-def reload_from_json(self, json):
-    """this function replaces all attributes of the Student instance
-    with the ones in the json argument
-    """
-
-    for key, value in json.items():
-        if key in self.__dict__:
-            self.__dict__[key] = value
+        def reload_from_json(self, json):
+            """this function replaces all attributes of the Student instance
+            with the ones in the json argument
+            """
+            for key, value in json.items():
+                if key in self.__dict__:
+                    self.__dict__[key] = value
