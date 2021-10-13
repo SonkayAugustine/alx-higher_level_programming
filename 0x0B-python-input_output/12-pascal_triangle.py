@@ -9,18 +9,26 @@ def pascal_triangle(n):
     returns a list of lists of integers representing Pascal's triangle
     """
     if n <= 0:
-        return []
-    elif n == 1:
-        return [[1]]
+        return list()
 
-    this_row = []
-    triangle = [[1], [1, 1]]
+    tr = []
+    for line in range(0, n):
+        # Every line has number of
+        # integers equal to line
+        # number
+        tmp = []
+        for i in range(0, line + 1):
+            tmp.append(magic(line, i))
+        tr.append(tmp)
+    return tr
 
-    for row in range(2, n):
-        this_row = [1]
-        for column in range(1, row):
-            element = triangle[row - 1][column - 1] + triangle[row - 1][column]
-            this_row.append(element)
-            this_row.append(1)
-            triangle.append(this_row)
-    return triangle
+
+def magic(n, k):
+    """magic function that does some magic"""
+    res = 1
+    if (k > n - k):
+        k = n - k
+    for i in range(0, k):
+        res = res * (n - i)
+        res = res // (i + 1)
+    return res
