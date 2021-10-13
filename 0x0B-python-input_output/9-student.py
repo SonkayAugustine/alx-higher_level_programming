@@ -5,7 +5,9 @@ task module: 9-student.py
 
 
 class Student:
-    """student class"""
+    """
+    student class
+    """
     def __init__(self, first_name, last_name, age):
         """Initialization of student object"""
         self.first_name = first_name
@@ -14,4 +16,5 @@ class Student:
 
     def to_json(Self):
         """return a dictionary representation of a student instance"""
+        if self.__dict__:
         return self.__dict__
