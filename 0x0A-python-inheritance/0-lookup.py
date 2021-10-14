@@ -6,13 +6,7 @@ Task 0 module
 
 def lookup(obj):
     '''
-    A function that returns the list of available attribute and methods of an object
-    '''
-    '''
-    Args:
-         obj: Object
-    Return:
-         list with method and attributes
+    A list of available attr and methods of an object
     '''
     obj_namespace = dir(obj)
 
