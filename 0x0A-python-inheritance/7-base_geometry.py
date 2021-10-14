@@ -8,6 +8,10 @@ class BaseGeometry():
     '''
     class BaseGeometry
     '''
+    def __init__(self):
+        '''empty int'''
+        pass
+
     def area(self):
         '''
         Calculates the area
@@ -21,4 +25,4 @@ class BaseGeometry():
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            riase ValueError("{} must be gretaer than 0".format(name))
+            raise ValueError("{} must be gretaer than 0".format(name))
