@@ -27,7 +27,7 @@ class TestBase(unittest.TestCase):
         self.assertTrue(hasattr(b0, '_Base__nb_objects'))
         Base._Base__nb_objects = 0
 
-    def test.id(self):
+    def test_id(self):
         b0 = Base()
         self.assertTrue(hasattr(b0, 'id'))
         Base._Base__nb_objects = 0
@@ -87,7 +87,7 @@ class TestBase(unittest.TestCase):
         obj = Base()
         failure_msg = 'global var __nb_objects not found'
         self.assertTrue(hasattr(obj, '_Base__nb_objects'), msg=failure_msg)
-        
+
     def test_base_default_id(self):
         self.assertEqual(Base._Base__nb_objects, 0)
         obj = Base()
@@ -112,7 +112,8 @@ class TestBase(unittest.TestCase):
         self.assertListEqual(ans, target, msg=failure_msg)
 
     def test_12_load_from_file(self):
-        '''Tests if the method loaded from file CSV is returning correctly, return empty list OTHERWISE'''
+        '''Tests if the method loaded from file CSV is returning correctly
+        '''
 
         os.remove('Rectangle.csv')
         new_list_objects = Rectangle.load_from_file_csv()
