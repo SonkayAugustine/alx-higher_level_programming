@@ -14,5 +14,6 @@ if (!check) {
     }
     square += '\n';
   }
+  square = square.slice(0, -1);
   console.log(square);
 }
