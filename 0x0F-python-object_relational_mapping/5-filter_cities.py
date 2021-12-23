@@ -16,8 +16,10 @@ if __name__ == '__main__':
                 'ON s.id = c.state_id WHERE ' +
                 'BINARY s.name = %s ' +
                 'ORDER BY c.id ASC;', [state_search])
-    query_rows = fetchall()
-    print(', '.join(map(lambda x: x[0], query_rows)))
+    query_rows = cur.fetchall()
+    for row in query_rows:
+        new_list.append(row[0])
+        print(', '.join(new_list))
 
     cur.close()
-    db.close()
+    conn.close()
