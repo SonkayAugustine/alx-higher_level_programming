@@ -17,9 +17,7 @@ if __name__ == '__main__':
                 'BINARY s.name = %s ' +
                 'ORDER BY c.id ASC;', [state_search])
     query_rows = cur.fetchall()
-    for row in query_rows:
-        new_list.append(row[0])
-        print(', '.join(new_list))
+    print(', '.join(map(lambda x: x[0], query_rows)))
 
     cur.close()
     conn.close()
