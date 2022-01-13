@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-# Take in a URL and email, send POST request
-
-import sys
-import urllib.request
-import urllib.parse
+'''
+Take in a URL and email, send POST request
+'''
 
 if __name__ == "__main__":
+    import sys
+    from urllib import request, parse
+    
     values = {'email': sys.argv[2]}
-    data = urllib.parse.urlencode(values)
-    data = data.encode('utf-8')
-    req = urllib.request.Request(sys.argv[1], data)
-    with urllib.request.urlopen(req) as res:
-        print(res.read().decode('utf-8'))
+    data = parse.urlencode(values).encode()
+    req = request.Request(sys.argv[1], data=data)
+    with request.urlopen(req) as res:
+        print(res.read().decode('UTF-8'))
