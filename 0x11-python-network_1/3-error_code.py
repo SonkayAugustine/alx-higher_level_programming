@@ -3,12 +3,16 @@
 Take in a URL, send a request to URL, and dispaly body
 '''
 
-if __name__ == '__main__':
-    import sys
-    from urllib import request, error
+import sys
+from urllib import request, error
 
+
+if __name__ == "__main__":
+    url = sys.argv[1]
+    req = urllib.request.Request(url)
     try:
-        with request.urlopen(sys.argv[1]) as res:
-            print(res.read().decode('utf-8'))
+        with urllib.request.urlopen(req) as res:
+            html = res.read()
+            print(html.decode('utf-8'))
     except urllib.error.HTTPError as er:
-        print("Error code:", (er.code))
+        print("Error code:{}".format(er.code))
