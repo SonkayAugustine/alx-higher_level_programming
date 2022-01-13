@@ -15,4 +15,4 @@ if __name__ == "__main__":
             html = res.read()
             print(html.decode('utf-8'))
     except urllib.error.HTTPError as er:
-        print("Error code:{}".format(er.code))
+        print("Error code: {}".format(er.code))
