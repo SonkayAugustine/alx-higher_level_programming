@@ -3,7 +3,7 @@
 Take in a URL, send a request to URL, and dispaly body
 '''
 import sys
-import urllib.request 
+import urllib.request
 
 
 if __name__ == "__main__":
