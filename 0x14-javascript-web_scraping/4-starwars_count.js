@@ -1,22 +1,21 @@
 #!/usr/bin/node
-// a script that prints the number of movies where the Character "Wedge Antilles"
-// is present
-
+// script that prints the title of a Star Wars movie where the episode
+// number matches a given integer
 const request = require('request');
-const apilibrary = {
+const options = {
   url: process.argv[2],
   method: 'GET'
 };
-request(apilibrary, function (err, response, body) {
-  if (err) {
-    return console.log(err);
+request(options, function (error, response, body) {
+  if (error) {
+    return console.log(error);
   } else {
     let count = 0;
-    for (const item of JSON.parse(body).results) {
-      for (const character of item.characters) {
-	    if (character.includes(18)) {
+    for (let item of JSON.parse(body).results) {
+      for (let character of item.characters) {
+        if (character.includes(18)) {
           count++;
-	    }
+        }
       }
     }
     console.log(count);
