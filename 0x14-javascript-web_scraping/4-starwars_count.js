@@ -15,7 +15,7 @@ request(apilibrary, function (err, response, body) {
     for (const item of JSON.parse(body).results) {
       for (const character of item.characters) {
 	    if (character.includes(18)) {
-		count++;
+          count++;
 	    }
       }
     }
