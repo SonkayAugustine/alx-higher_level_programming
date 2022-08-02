@@ -1,70 +1,27 @@
-# 0x08-PYTHON-MORE_CLASSES
+## Python - More Classes and Objects
+> Each file in this repository holds code that illustrates an essential concept of programming,
+> specific to the Python programming language:
+> classes, ```__del__```, ```__repr__```, @classmethods, @staticmethods
 
-## GENERAL
+### Description of what each file shows:
+* main_files ----- folder holds main programs that showcase examples of how to use functions
+* Files that start with:
+0. define empty Rectangle class to use as a basis for all other files
+1. add private width and height attributes with @property getter and setter
+2. add public methods area and perimeter
+3. add string representation for print() and (str) to work
+4. add string representation for repr() and eval() to work
+5. add __del__ method
+6. create and update class attribute number_of_instances
+7. create attribute that allows for printing rectangle based on what's given
+8. create static method that compares rectangle areas
+9. create class method that returns new rectangle instance as a square
 
-Why Python programming is awesome
-
-What is first-class 
-
-What is a class
-
-What is an object and an instance
-
-What is the difference between a class and an object or instance
-
-What is an attribute
-
-What are and how to use public, protected and private attributes
-
-What is self
-
-What is a method
-
-What is the special __init__ method and how to use it
-
-What is Data Abstraction, Data Encapsulation, and Information Hiding
-
-What is a property
-
-What is the difference between an attribute and a property in Python
-
-What is the Pythonic way to write getters and setters in Python
-
-What are the special __str__ and __repr__ methods and how to use them
-
-What is the difference between __str__ and __repr__
-
-What is a class attribute
-
-What is the difference between a object attribute and a class attribute
-
-What is a class method
-
-What is a static method
-
-How to dynamically create arbitrary new attributes for existing instances of a class
-
-How to bind attributes to object and classes
-
-What is and what does contain __dict__ of a class and of an instance of a class
-
-How does Python find the attributes of an object or class
-
-How to use the getattr functioneverythingOOP
-
-## REQUIREMENTS
-Allowed editors: vi, vim, emacs
-
-All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
-
-All your files should end with a new line
-
-The first line of all your files should be exactly #!/usr/bin/python3
-
-A README.md file, at the root of the folder of the project, is mandatory
-
-Your code should use the pycodestyle (version 2.7.*)
-
-All your files must be executable
-
-The length of your files will be tested using wc
+### Environment
+* Language: Python 3.4.3
+* OS: Ubuntu 14.04 LTS
+* Compiler: python3
+* Style guidelines: [PEP 8 (version 1.7)](https://www.python.org/dev/peps/pep-0008/) || [Google Style Python Docstrings](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
+---
+### Authors
+Melissa Ng [![M](https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Twitter_Bird.svg/30px-Twitter_Bird.svg.png)](https://twitter.com/MelissaNg__)
