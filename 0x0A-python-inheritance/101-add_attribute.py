@@ -1,14 +1,16 @@
 #!/usr/bin/python3
-'''
-Task 13 (101) Module
-'''
+"""
+Module 101-add_attribute
+
+Contains function that adds new attribute if possible
+"""
 
 
-def add_attirbute(obj, name, value):
-    '''
-    Check if it is possible to add an attr to class
-    '''
-    if '__dict__' not in dir(obj):
-       object.__dict__[name] = value
+def add_attribute(obj, attribute, value):
+    """
+    add attribute to object if possible
+    """
+    if ('__dict__' in dir(obj)):
+        setattr(obj, attribute, value)
     else:
-        raise TypeError("cant't add new attribute")
+        raise TypeError("can't add new attribute")
